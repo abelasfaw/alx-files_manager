@@ -12,7 +12,7 @@ class RedisClient {
     });
 
     this.client.on('connect', () => {
-      console.log("Redis connection successful")
+      console.log('Redis connection successful');
     });
   }
 
