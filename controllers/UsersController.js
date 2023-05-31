@@ -30,8 +30,7 @@ exports.getMe = async (req, res) => {
     return res.status(401).send({ error: 'Unauthorized' });
   }
 
-  const user = await dbClient
-    .collection('users')
+  const user = await dbClient.usersCollection
     .findOne({ _id: ObjectId(userId) });
   if (!user) {
     return res.status(401).send({ error: 'Unauthorized' });
