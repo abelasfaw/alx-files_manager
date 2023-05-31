@@ -18,5 +18,8 @@ router.route('/disconnect')
 router.route('/users/me')
   .get(UsersController.getMe);
 router.route('/files')
-  .post(FilesController.postUpload);
+  .post(FilesController.postUpload)
+  .get(FilesController.getIndex);
+router.route('/files/:id')
+  .get(FilesController.getShow);
 module.exports = router;
